@@ -1,0 +1,14 @@
+CREATE TABLE fato (
+	id_local INTEGER NOT NULL,
+	id_tempo INTEGER NOT NULL,
+	id_compquimico INTEGER NOT NULL,
+    
+	iqar DECIMAL NOT NULL,
+    concentracao DECIMAL NOT NULL,
+	
+	FOREIGN KEY (id_local) REFERENCES dimlocal(id),
+	FOREIGN KEY (id_tempo) REFERENCES dimtempo(id),
+	FOREIGN KEY (id_compquimico) REFERENCES compquimico(id),
+	
+	PRIMARY KEY (id_local, id_tempo, id_compquimico)
+);

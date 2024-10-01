@@ -1,0 +1,5 @@
+CREATE TABLE compquimico(
+	id SERIAL PRIMARY KEY,
+	nome VARCHAR(200),
+	sigla VARCHAR(200)
+);

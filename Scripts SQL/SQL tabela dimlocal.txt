@@ -1,0 +1,8 @@
+CREATE TABLE dimlocal(
+	id SERIAL PRIMARY KEY,
+	estacao VARCHAR(200),
+	municipio VARCHAR(200),
+	estado VARCHAR(200),
+	nomeestado VARCHAR(200),
+	regiao VARCHAR(200)
+);
