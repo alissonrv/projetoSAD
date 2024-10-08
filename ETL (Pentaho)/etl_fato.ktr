@@ -606,18 +606,8 @@
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Split fields</from>
-      <to>Filter rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Append streams</from>
       <to>Append streams 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Filter rows</from>
-      <to>Filter rows 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -673,6 +663,16 @@
     <hop>
       <from>Database lookup 2</from>
       <to>Database lookup 3</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Split fields</from>
+      <to>Filter rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Filter rows</from>
+      <to>Filter rows 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -1382,239 +1382,6 @@
     </GUI>
   </step>
   <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <send_true_to>Filter rows 2</send_true_to>
-    <send_false_to/>
-    <compare>
-      <condition>
-        <negated>N</negated>
-        <conditions>
-          <condition>
-            <negated>N</negated>
-            <leftvalue>Sigla</leftvalue>
-            <function>=</function>
-            <rightvalue/>
-            <value>
-              <name>constant</name>
-              <type>String</type>
-              <text>SO2</text>
-              <length>-1</length>
-              <precision>-1</precision>
-              <isnull>N</isnull>
-              <mask/>
-            </value>
-          </condition>
-          <condition>
-            <negated>N</negated>
-            <operator>OR</operator>
-            <conditions>
-              <condition>
-                <negated>N</negated>
-                <leftvalue>Sigla</leftvalue>
-                <function>=</function>
-                <rightvalue/>
-                <value>
-                  <name>constant</name>
-                  <type>String</type>
-                  <text>NO2</text>
-                  <length>-1</length>
-                  <precision>-1</precision>
-                  <isnull>N</isnull>
-                  <mask/>
-                </value>
-              </condition>
-              <condition>
-                <negated>N</negated>
-                <operator>OR</operator>
-                <conditions>
-                  <condition>
-                    <negated>N</negated>
-                    <leftvalue>Sigla</leftvalue>
-                    <function>=</function>
-                    <rightvalue/>
-                    <value>
-                      <name>constant</name>
-                      <type>String</type>
-                      <text>HCnM</text>
-                      <length>-1</length>
-                      <precision>-1</precision>
-                      <isnull>N</isnull>
-                      <mask/>
-                    </value>
-                  </condition>
-                  <condition>
-                    <negated>N</negated>
-                    <operator>OR</operator>
-                    <conditions>
-                      <condition>
-                        <negated>N</negated>
-                        <leftvalue>Sigla</leftvalue>
-                        <function>=</function>
-                        <rightvalue/>
-                        <value>
-                          <name>constant</name>
-                          <type>String</type>
-                          <text>HCT</text>
-                          <length>-1</length>
-                          <precision>-1</precision>
-                          <isnull>N</isnull>
-                          <mask/>
-                        </value>
-                      </condition>
-                      <condition>
-                        <negated>N</negated>
-                        <operator>OR</operator>
-                        <conditions>
-                          <condition>
-                            <negated>N</negated>
-                            <leftvalue>Sigla</leftvalue>
-                            <function>=</function>
-                            <rightvalue/>
-                            <value>
-                              <name>constant</name>
-                              <type>String</type>
-                              <text>CO</text>
-                              <length>-1</length>
-                              <precision>-1</precision>
-                              <isnull>N</isnull>
-                              <mask/>
-                            </value>
-                          </condition>
-                          <condition>
-                            <negated>N</negated>
-                            <operator>OR</operator>
-                            <conditions>
-                              <condition>
-                                <negated>N</negated>
-                                <leftvalue>Sigla</leftvalue>
-                                <function>=</function>
-                                <rightvalue/>
-                                <value>
-                                  <name>constant</name>
-                                  <type>String</type>
-                                  <text>MP10</text>
-                                  <length>-1</length>
-                                  <precision>-1</precision>
-                                  <isnull>N</isnull>
-                                  <mask/>
-                                </value>
-                              </condition>
-                              <condition>
-                                <negated>N</negated>
-                                <operator>OR</operator>
-                                <conditions>
-                                  <condition>
-                                    <negated>N</negated>
-                                    <leftvalue>Sigla</leftvalue>
-                                    <function>=</function>
-                                    <rightvalue/>
-                                    <value>
-                                      <name>constant</name>
-                                      <type>String</type>
-                                      <text>MP2,5</text>
-                                      <length>-1</length>
-                                      <precision>-1</precision>
-                                      <isnull>N</isnull>
-                                      <mask/>
-                                    </value>
-                                  </condition>
-                                  <condition>
-                                    <negated>N</negated>
-                                    <operator>OR</operator>
-                                    <conditions>
-                                      <condition>
-                                        <negated>N</negated>
-                                        <leftvalue>Sigla</leftvalue>
-                                        <function>=</function>
-                                        <rightvalue/>
-                                        <value>
-                                          <name>constant</name>
-                                          <type>String</type>
-                                          <text>O3</text>
-                                          <length>-1</length>
-                                          <precision>-1</precision>
-                                          <isnull>N</isnull>
-                                          <mask/>
-                                        </value>
-                                      </condition>
-                                      <condition>
-                                        <negated>N</negated>
-                                        <operator>OR</operator>
-                                        <conditions>
-                                          <condition>
-                                            <negated>N</negated>
-                                            <leftvalue>Sigla</leftvalue>
-                                            <function>=</function>
-                                            <rightvalue/>
-                                            <value>
-                                              <name>constant</name>
-                                              <type>String</type>
-                                              <text>CH4</text>
-                                              <length>-1</length>
-                                              <precision>-1</precision>
-                                              <isnull>N</isnull>
-                                              <mask/>
-                                            </value>
-                                          </condition>
-                                          <condition>
-                                            <negated>N</negated>
-                                            <operator>OR</operator>
-                                            <leftvalue>Sigla</leftvalue>
-                                            <function>=</function>
-                                            <rightvalue/>
-                                            <value>
-                                              <name>constant</name>
-                                              <type>String</type>
-                                              <text>CH?</text>
-                                              <length>-1</length>
-                                              <precision>-1</precision>
-                                              <isnull>N</isnull>
-                                              <mask/>
-                                            </value>
-                                          </condition>
-                                        </conditions>
-                                      </condition>
-                                    </conditions>
-                                  </condition>
-                                </conditions>
-                              </condition>
-                            </conditions>
-                          </condition>
-                        </conditions>
-                      </condition>
-                    </conditions>
-                  </condition>
-                </conditions>
-              </condition>
-            </conditions>
-          </condition>
-        </conditions>
-      </condition>
-    </compare>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
     <name>Filter rows 2</name>
     <type>FilterRows</type>
     <description/>
@@ -1753,15 +1520,12 @@
       </field>
       <field>
         <name>id_tempo</name>
-        <rename/>
       </field>
       <field>
         <name>id_compquimico</name>
-        <rename/>
       </field>
       <field>
         <name>iqar</name>
-        <rename/>
       </field>
       <field>
         <name>Concentracao</name>
@@ -2362,6 +2126,172 @@
     </remotesteps>
     <GUI>
       <xloc>864</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>Filter rows 2</send_true_to>
+    <send_false_to/>
+    <compare>
+      <condition>
+        <negated>N</negated>
+        <conditions>
+          <condition>
+            <negated>N</negated>
+            <leftvalue>sigla</leftvalue>
+            <function>=</function>
+            <rightvalue/>
+            <value>
+              <name>constant</name>
+              <type>String</type>
+              <text>SO2</text>
+              <length>-1</length>
+              <precision>-1</precision>
+              <isnull>N</isnull>
+              <mask/>
+            </value>
+          </condition>
+          <condition>
+            <negated>N</negated>
+            <operator>OR</operator>
+            <conditions>
+              <condition>
+                <negated>N</negated>
+                <leftvalue>sigla</leftvalue>
+                <function>=</function>
+                <rightvalue/>
+                <value>
+                  <name>constant</name>
+                  <type>String</type>
+                  <text>NO2</text>
+                  <length>-1</length>
+                  <precision>-1</precision>
+                  <isnull>N</isnull>
+                  <mask/>
+                </value>
+              </condition>
+              <condition>
+                <negated>N</negated>
+                <operator>OR</operator>
+                <conditions>
+                  <condition>
+                    <negated>N</negated>
+                    <operator>OR</operator>
+                    <conditions>
+                      <condition>
+                        <negated>N</negated>
+                        <operator>OR</operator>
+                        <conditions>
+                          <condition>
+                            <negated>N</negated>
+                            <leftvalue>sigla</leftvalue>
+                            <function>=</function>
+                            <rightvalue/>
+                            <value>
+                              <name>constant</name>
+                              <type>String</type>
+                              <text>CO</text>
+                              <length>-1</length>
+                              <precision>-1</precision>
+                              <isnull>N</isnull>
+                              <mask/>
+                            </value>
+                          </condition>
+                          <condition>
+                            <negated>N</negated>
+                            <operator>OR</operator>
+                            <conditions>
+                              <condition>
+                                <negated>N</negated>
+                                <leftvalue>sigla</leftvalue>
+                                <function>=</function>
+                                <rightvalue/>
+                                <value>
+                                  <name>constant</name>
+                                  <type>String</type>
+                                  <text>MP10</text>
+                                  <length>-1</length>
+                                  <precision>-1</precision>
+                                  <isnull>N</isnull>
+                                  <mask/>
+                                </value>
+                              </condition>
+                              <condition>
+                                <negated>N</negated>
+                                <operator>OR</operator>
+                                <conditions>
+                                  <condition>
+                                    <negated>N</negated>
+                                    <leftvalue>sigla</leftvalue>
+                                    <function>=</function>
+                                    <rightvalue/>
+                                    <value>
+                                      <name>constant</name>
+                                      <type>String</type>
+                                      <text>MP2,5</text>
+                                      <length>-1</length>
+                                      <precision>-1</precision>
+                                      <isnull>N</isnull>
+                                      <mask/>
+                                    </value>
+                                  </condition>
+                                  <condition>
+                                    <negated>N</negated>
+                                    <operator>OR</operator>
+                                    <conditions>
+                                      <condition>
+                                        <negated>N</negated>
+                                        <leftvalue>sigla</leftvalue>
+                                        <function>=</function>
+                                        <rightvalue/>
+                                        <value>
+                                          <name>constant</name>
+                                          <type>String</type>
+                                          <text>O3</text>
+                                          <length>-1</length>
+                                          <precision>-1</precision>
+                                          <isnull>N</isnull>
+                                          <mask/>
+                                        </value>
+                                      </condition>
+                                    </conditions>
+                                  </condition>
+                                </conditions>
+                              </condition>
+                            </conditions>
+                          </condition>
+                        </conditions>
+                      </condition>
+                    </conditions>
+                  </condition>
+                </conditions>
+              </condition>
+            </conditions>
+          </condition>
+        </conditions>
+      </condition>
+    </compare>
+    <attributes/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>496</xloc>
       <yloc>240</yloc>
       <draw>Y</draw>
     </GUI>

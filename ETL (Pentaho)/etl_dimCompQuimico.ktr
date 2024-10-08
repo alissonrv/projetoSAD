@@ -1097,38 +1097,8 @@
                 <conditions>
                   <condition>
                     <negated>N</negated>
-                    <leftvalue>sigla</leftvalue>
-                    <function>=</function>
-                    <rightvalue/>
-                    <value>
-                      <name>constant</name>
-                      <type>String</type>
-                      <text>HCnM</text>
-                      <length>-1</length>
-                      <precision>-1</precision>
-                      <isnull>N</isnull>
-                      <mask/>
-                    </value>
-                  </condition>
-                  <condition>
-                    <negated>N</negated>
                     <operator>OR</operator>
                     <conditions>
-                      <condition>
-                        <negated>N</negated>
-                        <leftvalue>sigla</leftvalue>
-                        <function>=</function>
-                        <rightvalue/>
-                        <value>
-                          <name>constant</name>
-                          <type>String</type>
-                          <text>HCT</text>
-                          <length>-1</length>
-                          <precision>-1</precision>
-                          <isnull>N</isnull>
-                          <mask/>
-                        </value>
-                      </condition>
                       <condition>
                         <negated>N</negated>
                         <operator>OR</operator>
@@ -1204,43 +1174,6 @@
                                           <isnull>N</isnull>
                                           <mask/>
                                         </value>
-                                      </condition>
-                                      <condition>
-                                        <negated>N</negated>
-                                        <operator>OR</operator>
-                                        <conditions>
-                                          <condition>
-                                            <negated>N</negated>
-                                            <leftvalue>sigla</leftvalue>
-                                            <function>=</function>
-                                            <rightvalue/>
-                                            <value>
-                                              <name>constant</name>
-                                              <type>String</type>
-                                              <text>CH4</text>
-                                              <length>-1</length>
-                                              <precision>-1</precision>
-                                              <isnull>N</isnull>
-                                              <mask/>
-                                            </value>
-                                          </condition>
-                                          <condition>
-                                            <negated>N</negated>
-                                            <operator>OR</operator>
-                                            <leftvalue>sigla</leftvalue>
-                                            <function>=</function>
-                                            <rightvalue/>
-                                            <value>
-                                              <name>constant</name>
-                                              <type>String</type>
-                                              <text>CH?</text>
-                                              <length>-1</length>
-                                              <precision>-1</precision>
-                                              <isnull>N</isnull>
-                                              <mask/>
-                                            </value>
-                                          </condition>
-                                        </conditions>
                                       </condition>
                                     </conditions>
                                   </condition>
